@@ -1,0 +1,33 @@
+target = 100
+t50 = int(target/2)
+prime_numbers = list(range(1,target))
+remover = list()
+prime_numbers.remove(1)
+
+for x in range(2,t50):
+#	print(len(prime_numbers))
+	nprime = x * 2
+#	print(nprime)
+	if nprime < target:
+		remover.append(nprime)
+print(remover)
+
+for count in range(3,t50,2):
+	print(count)
+	for x in range(count,t50,2):
+#		print(len(prime_numbers))
+		nprime = x * count
+#		print(nprime)
+		if nprime < target:
+			remover.append(nprime)
+print(remover)
+print(len(remover))
+#for count in range(len(remover),0,-1):
+#	print('this is len: ',len(remover))
+#	print('this is count: ',count)
+#	i = remover[count]
+#	print(i)
+#	del(prime_numbers[i-1])
+		
+print(prime_numbers)
+#print(len(prime_numbers))
